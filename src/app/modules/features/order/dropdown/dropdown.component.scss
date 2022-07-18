@@ -1,0 +1,60 @@
+.main {
+  position: relative;
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    min-width: 12rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: whitesmoke;
+    }
+
+    .label {
+      color: gray;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      min-width: 10rem;
+      height: 1.2rem;
+    }
+    .icon {
+      font-size: 18px;
+      color: gray;
+    }
+  }
+
+  .options-active {
+    display: flex;
+  }
+
+  .options {
+    display: none;
+    z-index: 999;
+    background-color: white;
+    position: absolute;
+    border: 1px solid lightgray;
+    border-top: 0px;
+    border-radius: 0.5rem;
+    top: 40px;
+    overflow-y: auto;
+    max-height: 20rem;
+    width: 12rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .option {
+      padding: 8px;
+      color: gray;
+      min-width: 12rem;
+      cursor: pointer;
+      &:hover {
+        background-color: whitesmoke;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<div class="header fx fx-space-between portrait-container">
+    <span class="header-title title-md">
+        Product Summary
+    </span>
+    <div class="header-dropdown fx fx-row fx-align-center portrait-container">
+        <span class="label">
+            Show
+        </span>
+        <app-dropdown [options]="sampleDropdown"></app-dropdown>
+
+    </div>
+    <!-- <app-button></app-button> -->
+    <div class="my-pagination">
+        <pagination-controls previousLabel=""
+                             nextLabel=""
+                             [responsive]="true"
+                             (pageChange)="onTableDataChange($event)"></pagination-controls>
+    </div>
+</div>
+<table class="table">
+    <tr class="table-header">
+        <th><input type="checkbox"
+                   id="selectAll"
+                   [(ngModel)]="masterSelected"
+                   (change)="checkUncheckAll()"></th>
+        <th *ngFor="let column of headers;index as i"
+            id="{{i}}">
+            {{column}}
+        </th>
+    </tr>
+    <tr *ngFor="let row of data | paginate : {itemsPerPage: 10, currentPage: page}; index as j"
+        class="table-content"
+        id="{{j}}"
+        (click)="row.selected = !row.selected">
+        <td><input type="checkbox"
+                   id="{{j}}"
+                   [(ngModel)]="row.selected"
+                   (change)="isAllSelected()"></td>
+        <td *ngFor="let column of headers ;index as k">
+            {{row[column]}}
+        </td>
+    </tr>
+</table>

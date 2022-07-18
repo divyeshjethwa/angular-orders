@@ -1,0 +1,32 @@
+:host {
+  width: 100%;
+}
+
+.search {
+  background-color: #f8f8ff;
+  border-radius: 0.6rem;
+  padding: 0.5rem 0.6rem;
+  &-icon {
+    margin: 0rem 0.5rem 0rem 0rem;
+    span {
+      color: lightgray;
+      font-size: 20px;
+    }
+  }
+
+  &-input {
+    min-width: 2rem;
+    flex-grow: 1;
+    border: 0;
+    background-color: inherit;
+    line-height: 0.9rem;
+    font-size: 0.9rem;
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: gray;
+    }
+  }
+}

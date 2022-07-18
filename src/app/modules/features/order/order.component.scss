@@ -1,0 +1,16 @@
+.main {
+  margin: 2rem;
+  .buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  .round-container {
+    gap: 1rem;
+    .search-container {
+      flex-grow: 1;
+    }
+    .search-button {
+      margin: 1.8rem 0rem 0rem 0rem;
+    }
+  }
+}

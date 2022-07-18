@@ -1,0 +1,106 @@
+.header {
+  width: 100;
+  &-title {
+    flex-grow: 1;
+  }
+  &-dropdown {
+    margin: 0rem 1rem;
+    .label {
+      margin: 0rem 1rem;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .table {
+    overflow: scroll;
+    th,
+    td {
+      font-size: 0.5rem;
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+
+  &-caption {
+    width: 100%;
+  }
+  &-header,
+  &-content {
+    th,
+    td {
+      text-align: left;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border: none;
+      border-width: 0px;
+      border-bottom: 1px solid #f8f8ff;
+    }
+  }
+  tr {
+    &:hover {
+      background-color: whitesmoke;
+      cursor: pointer;
+    }
+  }
+
+  &-header {
+    th {
+      background-color: #f8f8ff;
+      text-transform: uppercase;
+    }
+  }
+
+  tr:last-child > td {
+    border-bottom: none;
+  }
+}
+
+.my-pagination ::ng-deep {
+  .ngx-pagination {
+    padding-left: 0px !important;
+
+    li {
+      height: 1rem;
+      width: 1rem;
+      text-align: center;
+      padding: 7px;
+      font-size: 0.85rem;
+      font-family: "Lato";
+
+      a {
+        padding: 0;
+        &:hover {
+          cursor: pointer;
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .ngx-pagination {
+      li {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .ngx-pagination .current,
+  .btn-info {
+    background: #1f4af2 !important;
+    border: transparent !important;
+    border-radius: 0.2rem !important;
+  }
+
+  .ngx-pagination .current:hover {
+    cursor: pointer;
+    background: #1f4af2 !important;
+    border-radius: 0.2rem !important;
+    border: transparent !important;
+  }
+}

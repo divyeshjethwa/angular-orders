@@ -1,0 +1,23 @@
+<div class="main"
+     appClickOutside
+     (clickOutside)="clickOutside()">
+    <div class="box"
+         (click)="showOptions()"
+         #toggle>
+        <span class="
+         label">
+            {{selected}}
+        </span>
+        <span class="material-symbols-outlined icon">
+            expand_more
+        </span>
+    </div>
+
+    <div #list
+         class="options fx fx-column fx-space-between fx-align-start"
+         [ngStyle]="isOpen?{'display':'flex'}:{'display':'none'}">
+        <span class="option"
+              (click)="selectOption(item)"
+              *ngFor="let item of options">{{getValue(item)}}</span>
+    </div>
+</div>

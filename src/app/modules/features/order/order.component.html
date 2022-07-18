@@ -1,0 +1,36 @@
+<section class="main">
+    <div class="fx fx-row fx-space-between portrait-container">
+        <span class="title-lg ">Currencies</span>
+        <div class="buttons">
+            <app-button [label]="'create new'"></app-button>
+            <a href=""
+               [routerLink]="
+             ['/']"
+               routerLinkActive="router-link-active">
+                <app-button [label]="'go back'"></app-button>
+            </a>
+        </div>
+    </div>
+    <div class="round-container fx fx-row fx-space-between portrait-container">
+        <div class="search-container fx fx-column fx-space-between fx-align-start">
+            <span class="title-sm pd-tb-md">What are you looking for?</span>
+            <app-search></app-search>
+        </div>
+        <div class="fx fx fx-column fx-space-between fx-align-start">
+            <span class="title-sm pd-tb-md">Currency</span>
+            <app-dropdown [options]="allCurrencies"
+                          [useValue]="'currency'"></app-dropdown>
+        </div>
+        <div class="fx fx fx-column fx-space-between fx-align-start">
+            <span class="title-sm pd-tb-md">Provider</span>
+            <app-dropdown [options]="allCurrencies"
+                          [useValue]="'value'"></app-dropdown>
+        </div>
+        <app-button class="search-button"
+                    [label]="'search'"></app-button>
+    </div>
+
+    <div class="round-container">
+        <app-table [data]="allCurrencyDetails"></app-table>
+    </div>
+</section>

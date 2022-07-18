@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+
+  height: 4rem;
+  width: 100%;
+
+  background-color: white;
+
+  &-title,
+  &-avatar {
+    padding: 0rem 2rem;
+  }
+  &-title {
+  }
+  &-avatar {
+  }
+}

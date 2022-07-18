@@ -1,1 +1,118 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: #f8f8ff;
+  font-family: "Lato", sans-serif;
+}
+
+.fx {
+  display: flex;
+}
+
+.fx-space-between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fx-row {
+  flex-direction: row;
+}
+
+.fx-column {
+  flex-direction: column;
+}
+
+.fx-align-center {
+  align-items: center;
+}
+
+.fx-align-start {
+  align-items: flex-start;
+}
+
+.fx-align-end {
+  align-items: flex-end;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.title-lg {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.title-md {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.title-sm {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.pd-lg {
+  padding: 2rem;
+}
+
+.pd-md {
+  padding: 1.5rem;
+}
+
+.pd-sm {
+  padding: 1rem;
+}
+
+.pd-tb-md {
+  padding: 0.5rem 0;
+}
+
+.mg-lg {
+  margin: 2rem;
+}
+
+.mg-md {
+  margin: 1.5rem;
+}
+
+.mg-sm {
+  margin: 1rem;
+}
+
+.example {
+  flex-grow: 1;
+  border: 1px solid lightgray;
+  border-radius: 0.6rem;
+  height: 2rem;
+  width: 10rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .portrait-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    .fx {
+      flex-grow: 1;
+    }
+  }
+}
+
+.round-container {
+  padding: 0.5rem 1.5rem 1rem;
+  margin: 2rem 0rem 0rem 0rem;
+  align-self: center;
+  border-radius: 1.5rem;
+  background-color: white;
+  box-shadow: 5px 10px 8px #dedcdc;
+}
